@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: 0;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        .left{
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        .right{
+            border: 1px solid blue;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            gap: 30px;
+            width: 50vh;
+        }
+        main{
+            
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            height: 90vh;
+        }
+        footer{
+            height: 10vh;
+        }
+        .logo{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 25px;
+
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        h1{
+            font-size: 74px;
+            width: 50%;
+        }
+        .image img{
+            width: 90vh;
+            height: 90vh;
+            border: 1px solid;
+        }
+        .login{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="left">
+            <div class="logo">
+                <img src="images/OIP.jpg" alt="">
+            <h1>Explore the things you love.</h1>
+        </div>
+
+        <div class="image">
+            <img src="images/fc.logo.webp" alt="">
+        </div>
+    </div>
+        <div class="right">
+          <p>Log in to Facebook</p>
+        <input type="text">
+        <input type="password">
+        <button>Log in</button>
+        <button>Forgotten Password</button>
+        <button>Create New Account</button>
+        </div>
+    </main>
+</body>
+</html>
