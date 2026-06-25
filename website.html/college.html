@@ -28,8 +28,6 @@
             display: flex;
             justify-content: space-evenly;
             background-color: #0e447e;
-
-
         }
         button{
             background-color: white;
@@ -46,12 +44,10 @@
         img{
             width: 20vw;
             padding-bottom:20px;
-
         }
         input{
             background-color: none;
             font-size: larger;
-            
         }
         .overview{
             text-align: center;
@@ -63,17 +59,54 @@
             font-size: larger;
             font-weight: bolder;
         }
+        .overview a {
+            text-decoration: none;
+        }
+
+        .simple-slider{
+            width: 100vw;
+            height: 700px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .simple-slider img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0; 
+            animation: simpleFade 24s infinite; 
+            padding-bottom: 0; 
+        }
+        .simple-slider img:nth-child(1) {animation-delay: 0s;}
+        .simple-slider img:nth-child(2) {animation-delay: 3s;}
+        .simple-slider img:nth-child(3) {animation-delay: 6s;}
+        .simple-slider img:nth-child(4) {animation-delay: 9s;}
+        .simple-slider img:nth-child(5) {animation-delay: 12s;}
+        .simple-slider img:nth-child(6) {animation-delay: 15s;}
+        .simple-slider img:nth-child(7) {animation-delay: 18s;}
+        .simple-slider img:nth-child(8) {animation-delay: 21s;}
+
+        @keyframes simpleFade {
+            0% { opacity: 0; }
+            5% { opacity: 1; }  
+            12% { opacity: 1; } 
+            17% { opacity: 0; } 
+            100% { opacity: 0; }
+        }
+
         .image img{
             width: 100vw;
             height: 50vh;
-
         }
         h1{
             text-align: center;
         }
-        ul{
+        .welcome-text p {
             padding-left: 10%;
-            /* border: 1px solid ; */
             margin: 10px;
             font-size: larger;
         }
@@ -246,19 +279,26 @@
             height: 50px;
             border-radius: 10px;
         }
+        
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <main>
         <div class="college">
             <div class="center">
-                <a href="" style="color: yellow;">Chennai Campus</a>
+                <a href="" style="color: yellow; animation: blinker 1s linear infinite; text-decoration: none;">Chennai Campus</a>
                 <p style="color: white;">Admission Open 2026-27</p>
-                <button style="color: #007bff;">apply now</button>
+                <button style="color: #007bff; animation: blinker 1s linear infinite; text-decoration: none;">apply now</button>
                 <button>IQAC</button>
                 <button>SDG</button>
+                <button>NIRF</button>
                 <p style="color: white;">Tel. 04563 289042</p>
-                <div class style="color: white;">☰</div>
+                <div style="color: white;">☰</div>
             </div>
             <div class="left">
                 <div class="overview">
@@ -267,24 +307,33 @@
                 <a href="">Admissions</a>
                 <a href="">Academics</a>
                 <a href="">CampusLife</a>
-                <a href="">Research</a>
+                <a href=""style="animation: blinker 1s linear infinite;">Research</a>
                 <a href="">Accereditation & Ranking</a>
                 <a href="">Placements</a>
                 </div>
             </div>
-            <div class="image">
-                <img src="overview.png" alt="">
-                <hr>
+            
+            <div class="simple-slider">
+                <img src="coll6.png" alt="Slide 1">
+                <img src="coll7.png" alt="Slide 2">
+                <img src="coll8.png" alt="Slide 3">
+                <img src="coll9.png" alt="Slide 4">
+                <img src="coll2.png" alt="Slide 5">
+                <img src="coll10.png" alt="Slide 6">
+                <img src="coll11.png" alt="Slide 7">
+                <img src="coll12.png" alt="slider 8">
             </div>
+            <hr>
+
             <div class="right">
                 <h1>Opening of First Year Classes-2026</h1>
-                <li>
-                    <ul>Welcome to Kalasalingam Academy of Research and Education!</ul>
-                    <ul>Congratulations on your son’s/daughter’s/ward’s admission to our University. We are proud to partner with you in shaping them into a skilled professional, a responsible citizen, and a future-ready leader.</ul>
-                    <ul>At KARE, our mission is to nurture and empower students to become global leaders equipped with strong knowledge, technical expertise, and values.</ul>
-                    <ul>We warmly welcome you to the commencement of classes for the first year (2026-2027). The academic session will begin with an inaugural function, scheduled to begin on 3rd August 2026.</ul>
-                    <ul>We look forward to a fruitful and inspiring journey ahead with your family.</ul>
-                </li>
+                <div class="welcome-text">
+                    <p>Welcome to Kalasalingam Academy of Research and Education!</p>
+                    <p>Congratulations on your son's/daughter's/ward's admission to our University. We are proud to partner with you in shaping them into a skilled professional, a responsible citizen, and a future-ready leader.</p>
+                    <p>At KARE, our mission is to nurture and empower students to become global leaders equipped with strong knowledge, technical expertise, and values.</p>
+                    <p>We warmly welcome you to the commencement of classes for the first year (2026-2027). The academic session will begin with an inaugural function, scheduled to begin on 3rd August 2026.</p>
+                    <p>We look forward to a fruitful and inspiring journey ahead with your family.</p>
+                </div>
                 <hr>
                 <h2>Hostel Opening Dates</h2>
                 <table>
@@ -294,13 +343,12 @@
                             <th>Hostel</th>
                         </tr>
                         <tr>
-                            <td>01.07.2026 – 03.07.2026</td>
-                            <td>Special Rooms (Attached & AC) – Both MH & LH</td>
-
+                            <td>01.07.2026 - 03.07.2026</td>
+                            <td>Special Rooms (Attached & AC) - Both MH & LH</td>
                         </tr>
                         <tr>
                             <td>From 04.07.2026</td>
-                            <td>Both Men’s Hostels (MH) & Ladies Hostels (LH) – all types of rooms</td>
+                            <td>Both Men's Hostels (MH) & Ladies Hostels (LH) - all types of rooms</td>
                         </tr>
                     </tbody> 
                 </table>
@@ -507,8 +555,14 @@
         <div class="submission-note">
             <p><strong>Note:</strong> Students can submit your documents to the Admission Office on or before the respective opening dates.</p>
         </div>
+        
+        <div class="image">
+            <img src="coll5.png" alt="">
+        </div>
+        <div class="image">
+            <img src="coll4.png" alt="">
+        </div>
 
-        <!-- Fully Re-structured Footer Panel -->
         <footer>
             <div class="footer-container">
                 <div class="footer-column">
@@ -531,7 +585,7 @@
                         <li><a href="">National Academic Depository (NAD) Registration Helpline</a></li>
                         <li><a href="">Important Forms</a></li>
                         <li><a href="">KARE e-Verification</a></li>
-                        <li><a href="mailto:coe@klu.ac.in">Contact Mail: coe@klu.ac.in</a></li>
+                        <li><a href="url?id=1">Contact Mail: coe@klu.ac.in</a></li>
                         <li><a href="">EMGRC</a></li>
                         <li><a href="">URAC</a></li>
                     </ul>
